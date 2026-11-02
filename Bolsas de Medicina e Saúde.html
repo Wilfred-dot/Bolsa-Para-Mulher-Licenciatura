@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="pt"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Bolsas de Medicina e Saúde</title><style>:root{--bg:#f4f9fd;--tx:#0b2236;--mut:#46617a;--lin:#cfe0ee;--ac:#1e78c2;--sol:#f2b705;--vm:#b3261e;--lar:#9a5b00;--ok:#1b6b3a;--cz:#5a6e80;--hero:#bfe0f7;--hero-tx:#0b2236;--hero-lin:#0b223633;--num:#0a4a8a;--btn:#1e78c2;--btn-tx:#fff;--rail:#a9c4d9;color-scheme:light;--serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#08141d;--tx:#e6f2fb;--mut:#93adc2;--lin:#233a4c;--ac:#8fd0ff;--vm:#ff8a80;--lar:#f2b705;--ok:#6fdc97;--cz:#8aa1b3;--hero:#12354f;--hero-tx:#eaf5fd;--hero-lin:#ffffff2e;--num:#8fd0ff;--btn:#8fd0ff;--btn-tx:#06131d;--rail:#34536b;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#08141d;--tx:#e6f2fb;--mut:#93adc2;--lin:#233a4c;--ac:#8fd0ff;--vm:#ff8a80;--lar:#f2b705;--ok:#6fdc97;--cz:#8aa1b3;--hero:#12354f;--hero-tx:#eaf5fd;--hero-lin:#ffffff2e;--num:#8fd0ff;--btn:#8fd0ff;--btn-tx:#06131d;--rail:#34536b;color-scheme:dark}
+:root[data-theme=light]{--bg:#f4f9fd;--tx:#0b2236;--mut:#46617a;--lin:#cfe0ee;--ac:#1e78c2;--sol:#f2b705;--vm:#b3261e;--lar:#9a5b00;--ok:#1b6b3a;--cz:#5a6e80;--hero:#bfe0f7;--hero-tx:#0b2236;--hero-lin:#0b223633;--num:#0a4a8a;--btn:#1e78c2;--btn-tx:#fff;--rail:#a9c4d9;color-scheme:light}
+*{box-sizing:border-box}html{scroll-padding-top:190px}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;padding-bottom:env(safe-area-inset-bottom)}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.topo{background:var(--hero);color:var(--hero-tx);padding:calc(env(safe-area-inset-top) + 14px) 18px 18px}
+.topo>*{max-width:720px;margin-left:auto;margin-right:auto}
+.cab{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}.marca{margin:0;font-size:.95rem;font-weight:600}
+#tema{min-height:44px;padding:0 12px;background:transparent;color:inherit;border:1px solid currentColor;border-radius:3px;font-size:.88rem}
+.hero .rot{margin:0;font-size:.95rem;opacity:.85}
+.gr{display:flex;align-items:flex-end;gap:14px;margin:2px 0 6px}
+.num{font:700 5.6rem/.85 var(--serif);letter-spacing:-.03em;color:var(--num)}
+.gr div{padding-bottom:4px}.mes{display:block;font:600 1.25rem/1.2 var(--serif)}.falta{display:block;font-size:1rem}
+.hn{margin:0 0 8px;font-size:1.02rem}.hero a{color:var(--hero-tx);text-underline-offset:3px;font-weight:600;display:inline-block;padding:10px 0}
+.aviso{margin-top:12px;margin-bottom:0;padding-top:12px;border-top:1px solid var(--hero-lin);font-size:.88rem;opacity:.9}
+.resumo{margin-top:8px;margin-bottom:0;font-size:.88rem;opacity:.9}
+.barra{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--lin);padding:calc(env(safe-area-inset-top) + 8px) 14px 0}
+.barra>*{max-width:720px;margin-left:auto;margin-right:auto}
+input,select,button{font:inherit;min-height:44px;color:var(--tx);background:var(--bg);border:1px solid var(--lin);border-radius:3px;padding:0 10px}
+#q{width:100%;border-width:0 0 2px;border-color:var(--ac);border-radius:0;padding:0 2px;background:transparent}
+.filtros{display:flex;gap:6px;margin-top:8px}.filtros select{flex:1;min-width:0}
+#cont{margin:6px auto 0;font-size:.82rem;color:var(--mut)}
+nav{display:flex;gap:18px;overflow-x:auto;margin-top:2px}nav a{white-space:nowrap;padding:10px 0;color:var(--tx);text-decoration:none;font-size:.95rem;border-bottom:3px solid transparent}
+nav a:hover,nav a:focus-visible{border-color:var(--sol)}
+main{max-width:720px;margin:0 auto;padding:10px 14px 30px 72px}
+section{margin-top:26px}
+h2{position:relative;margin:0;padding:0 0 12px 22px;border-left:2px solid var(--rail);font:700 1.45rem/1.1 var(--serif)}
+h2::before{content:"";position:absolute;left:-7px;top:3px;width:12px;height:12px;background:var(--ac)}
+h2 small{font:400 .9rem system-ui,sans-serif;color:var(--mut);margin-left:6px}
+.vazio{margin:0;color:var(--mut);font-size:.92rem}section>.vazio{padding:0 0 10px 22px;border-left:2px solid var(--rail)}
+article{position:relative;margin:0;padding:0 0 26px 22px;border-left:2px solid var(--rail)}
+article::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--bg);border:2px solid var(--cz)}
+article.conf::before{background:var(--sol);border-color:var(--sol)}
+.dia{position:absolute;left:-66px;top:0;width:50px;text-align:right;font-family:var(--serif);line-height:1}
+.dia b{display:block;font-size:1.9rem;font-weight:700}.dia i{display:block;margin-top:3px;font:normal .78rem system-ui,sans-serif;color:var(--mut)}
+article h3{margin:0 0 2px;font:700 1.18rem/1.25 var(--serif)}
+.linha{margin:0;color:var(--mut);font-size:.92rem}.linha b{color:var(--ok)}
+.prazo{margin:8px 0 0;font-weight:600}.p-vm{color:var(--vm)}.p-lar{color:var(--lar)}.p-ver{color:var(--ok)}.p-cz{color:var(--cz)}
+.acoes{display:flex;gap:6px;flex-wrap:wrap;margin-top:12px}
+.acoes a,.acoes button{display:inline-flex;align-items:center;min-height:44px;padding:0 14px;border:1px solid var(--ac);border-radius:3px;background:transparent;color:var(--ac);text-decoration:none;cursor:pointer;font-size:.95rem}
+.acoes a.prim{background:var(--btn);color:var(--btn-tx);border-color:var(--btn);font-weight:600}
+.acoes button[aria-pressed=true]{background:var(--ac);color:var(--bg)}
+.det{margin:12px 0 0;font-size:.93rem;max-width:62ch}.det[hidden]{display:none}.det dt{font-weight:600;margin-top:10px}.det dd{margin:0;color:var(--mut)}
+.det a{color:var(--ac)}
+mark{background:var(--sol);color:#201700;padding:0 1px}
+footer{max-width:720px;margin:0 auto;padding:6px 14px 30px;color:var(--mut);font-size:.82rem}
+#instalar{color:var(--ac);border-color:var(--ac);background:transparent}
+:focus-visible{outline:3px solid var(--sol);outline-offset:2px}
+@media(min-width:760px){main{padding-left:92px}.dia{left:-86px}.num{font-size:7rem}}
+
+.atual{display:flex;align-items:center;gap:12px;margin-top:6px;margin-bottom:0}
+#atualizar{min-height:44px;padding:0 14px;background:var(--hero-tx);color:var(--hero);border:0;border-radius:3px;font-weight:600;cursor:pointer;flex:none}
+#atualizar:disabled{opacity:.6}
+#estado{margin:0;font-size:.85rem;opacity:.95}
+.nova{display:inline-block;font:600 .72rem system-ui,sans-serif;background:var(--sol);color:#201700;padding:1px 7px;border-radius:2px;vertical-align:middle}
+article.jan::before{background:var(--ac);border-color:var(--ac)}
+article.prev::before{border-style:dashed;border-color:var(--ac)}
+article.prev{border-left-style:dashed}
+.dia i{font-style:italic}
+</style></head><body>
+<header class="topo"><div class="cab"><p class="marca">Bolsas de Medicina e Saúde</p><button id="tema" type="button">Modo escuro</button></div><div id="hero"></div>
+<div class="atual"><button id="atualizar" type="button">Atualizar lista</button><p id="estado" role="status"></p></div>
+<p class="aviso">Os prazos mudam todos os anos. Confirma sempre no site oficial antes de candidatar. Nenhuma bolsa legítima pede pagamento para candidatar.</p>
+<p id="meta" class="resumo"></p></header>
+<div class="barra"><label class="vh" for="q">Pesquisar bolsas</label><input id="q" type="search" placeholder="Pesquisar país, mês, nome ou curso" autocomplete="off">
+<div class="filtros"><select id="fCob" aria-label="Cobertura"><option value="">Cobertura</option><option>Completa</option><option>Parcial</option></select>
+<select id="fPais" aria-label="País"><option value="">País</option></select>
+<select id="fFav" aria-label="Mostrar"><option value="">Todas</option><option value="fav">Favoritas</option><option value="feita">Já candidatei</option><option value="porfazer">Por candidatar</option></select>
+<button id="limpar" type="button">Limpar</button></div><p id="cont" aria-live="polite"></p>
+<nav id="menu" aria-label="Meses"></nav></div>
+<main id="lista"></main>
+<footer><p id="rod"></p></footer>
+<script>// DADOS: edite só este ficheiro. Nunca estime datas.
+// prazo = "AAAA-MM-DD" (data confirmada). Sem data exata, usa "quando": {ordem:"AAAA-MM-DD" (só para ordenar), texto, tipo:"janela"|"previsto"}
+// "janela" = período publicado no edital. "previsto" = estimativa com base no ciclo anterior, ainda não confirmada.
+window.DADOS={atualizado:"2026-11-02",bolsas:[
+{id:"russia-quota",nome:"Quota do Governo da Federação Russa",pais:"Rússia",bandeira:"🇷🇺",instituicao:"Governo russo (via Rossotrudnichestvo / embaixada)",
+ cobertura:"Completa",cobertura_detalhes:"Propinas, cursos preparatórios de língua, bolsa mensal e residência (taxa mensal de 2 500 a 3 769 RUB na NUST MISIS).",
+ prazo:"2027-01-15",ciclo:"2027/28",cursos:"Depende da universidade escolhida (até 6). Medicina e saúde: a confirmar por universidade.",
+ requisitos:["Cidadã estrangeira","Candidatura em education-in-russia.com","Documentos traduzidos para russo e notarizados"],
+ idioma:"A maioria dos cursos é em russo; o ano preparatório é pago pela bolsa.",idade:"A confirmar",so_mulheres:"Não indicado",
+ link:"https://education-in-russia.com/",fonte:"https://en.misis.ru/applicants/scholarships/quota/",verificado:"2026-11-02",
+ notas:"Data indicada pela universidade NUST MISIS para países fora da CEI. Confirma no portal oficial e na Embaixada da Rússia."},
+{id:"dundee-africa",nome:"Universidade de Dundee: bolsas para licenciatura (África)",pais:"Reino Unido",bandeira:"🇬🇧",instituicao:"University of Dundee",
+ cobertura:"Parcial",cobertura_detalhes:"Redução de propinas. Bolsa Vice-Chancellor's Africa: £6 500. Global Excellence: £7 500 por ano. A universidade diz que não oferece bolsas integrais.",
+ prazo:"2027-01-31",ciclo:"Entrada em janeiro de 2027",cursos:"Cursos de saúde: a confirmar. A página lista uma bolsa de Medicina só para setembro (fechou a 9 mar 2026).",
+ requisitos:["Candidata com propinas de estudante internacional e residência em África"],idioma:"Inglês",idade:"A confirmar",so_mulheres:"Não",
+ link:"https://www.dundee.ac.uk/scholarships/undergraduate-africa",fonte:"https://www.dundee.ac.uk/scholarships/undergraduate-africa",verificado:"2026-11-02",
+ notas:"Datas na página: Alumni 29 jan 2027, Global Excellence 30 jan 2027, Vice-Chancellor's Africa 31 jan 2027."},
+{id:"gks-u",nome:"Global Korea Scholarship para licenciatura (GKS-U)",pais:"Coreia do Sul",bandeira:"🇰🇷",instituicao:"NIIED, Ministério da Educação da Coreia",
+ cobertura:"Completa",cobertura_detalhes:"Descrita em guias como integral, com 1 ano de língua coreana. Confirmar no edital oficial.",
+ quando:{ordem:"2026-11-30",tipo:"janela",texto:"A via embaixada encerrou a 30 set 2026. Via universidade: setembro a novembro de 2026, com prazo próprio de cada universidade. Vê se ainda aceitam."},
+ ciclo:"Início em março de 2027",cursos:"Vários. Medicina e saúde: a confirmar por universidade.",
+ requisitos:["Terminar o ensino secundário até 31 dez 2026","Sem licenciatura anterior"],idioma:"Inglês ou coreano, conforme o curso",idade:"Menos de 25 anos a 1 de março (segundo guias). Confirmar.",so_mulheres:"Não",
+ link:"https://www.studyinkorea.go.kr/",fonte:"https://www.mofa.go.kr/ca-en/brd/m_5231/view.do?seq=761813",verificado:"2026-11-02",
+ notas:"Resultado final esperado a 7 jan 2027. Não confirmei se Moçambique faz parte da via embaixada."},
+{id:"hungaricum",nome:"Stipendium Hungaricum",pais:"Hungria",bandeira:"🇭🇺",instituicao:"Governo húngaro (Tempus Public Foundation)",
+ cobertura:"Completa",cobertura_detalhes:"Guias descrevem: propinas isentas, bolsa mensal, alojamento ou subsídio e seguro de saúde. Confirmar no edital.",
+ quando:{ordem:"2027-01-15",tipo:"previsto",texto:"Previsto para meados de janeiro de 2027. Estimativa baseada no ciclo anterior (15 jan 2026, 14h CET). O edital 2027/28 ainda não foi confirmado."},
+ prazo_anterior:"15 jan 2026, 14h (CET), ciclo 2026/27",ciclo:"2027/28",cursos:"Medicina e saúde: a confirmar por universidade.",
+ requisitos:["Moçambique consta na lista de países parceiros da Universidade de Debrecen","Candidatura online e, em geral, passo junto do parceiro nacional (prazo pode ser mais cedo)"],
+ idioma:"A confirmar",idade:"A confirmar",so_mulheres:"Não indicado",
+ link:"https://stipendiumhungaricum.hu/",fonte:"https://edu.unideb.hu/p/stipendium-hungaricum-scholarship-20272028",verificado:"2026-11-02",
+ notas:"Guias esperam a abertura do portal em novembro de 2026. Não uses a data do ano passado como definitiva."},
+{id:"turkiye",nome:"Türkiye Bursları (Bolsas da Turquia)",pais:"Turquia",bandeira:"🇹🇷",instituicao:"Governo turco (YTB)",
+ cobertura:"Completa",cobertura_detalhes:"Guias descrevem: propinas, bolsa mensal, residência, seguro de saúde e curso de turco. Confirmar no site oficial.",
+ quando:{ordem:"2027-02-20",tipo:"previsto",texto:"Previsto de 10 jan a 20 fev de 2027. Estimativa baseada no calendário de 2026. Datas de 2027 sem confirmação oficial."},
+ prazo_anterior:"10 jan a 20 fev 2026, ciclo 2026",ciclo:"2027/28",cursos:"A confirmar",
+ requisitos:["Candidatura online gratuita","Só uma candidatura por ciclo"],idioma:"A confirmar",idade:"A confirmar",so_mulheres:"Não indicado",
+ link:"https://turkiyeburslari.gov.tr/",fonte:"https://www.gtu.edu.ge/en/international-news/turkiye-burslari-turqetis-stipendiebis-programebi-2026/",verificado:"2026-11-02",
+ notas:"Ninguém está autorizado a candidatar por ti. O IBE também publica editais da Turquia."},
+{id:"china-cgs",nome:"Bolsa do Governo Chinês (CGS / CSC)",pais:"China",bandeira:"🇨🇳",instituicao:"China Scholarship Council",
+ cobertura:"Completa",cobertura_detalhes:"Propinas, alojamento (ou subsídio), bolsa mensal e seguro, segundo as fontes lidas. Confirmar valores.",
+ quando:{ordem:"2027-02-28",tipo:"previsto",texto:"O ciclo 2027/28 já abriu noutros países (27 out 2026). Para Moçambique, o prazo varia entre dezembro de 2026 e abril de 2027, conforme a via. Não confirmado."},
+ ciclo:"2027/28",cursos:"A confirmar por universidade",
+ requisitos:["Candidatura em campuschina.org e na universidade","Exame CSCA para licenciaturas desde 2026/27 (segundo um guia; confirmar)"],idioma:"A confirmar",idade:"Licenciatura: até 25 anos (edital do IBE 2026/27)",so_mulheres:"Não indicado",
+ link:"https://www.campuschina.org/",fonte:"https://id.china-embassy.gov.cn/eng/sgdt/202610/t20261027_12047753.htm",verificado:"2026-11-02",
+ notas:"Pela via do IBE (9 bolsas em 2026/27) as áreas eram Ciências, Tecnologias, Engenharias e Matemática, por isso saúde pode ficar de fora. Pergunta à Embaixada da China em Maputo."},
+{id:"camoes-mocambique",nome:"Bolsas do Estado Português para estudar em Moçambique",pais:"Moçambique",bandeira:"🇲🇿",instituicao:"Camões I.P., Embaixada de Portugal e IBE",
+ cobertura:"A confirmar",cobertura_detalhes:"A confirmar no edital.",
+ quando:{ordem:"2027-03-24",tipo:"previsto",texto:"Previsto para março de 2027. Em 2026 as candidaturas foram de 4 a 24 de março. Estimativa, não confirmada."},
+ prazo_anterior:"4 a 24 mar 2026 (6 bolsas, ano letivo 2026)",ciclo:"2027",cursos:"Licenciaturas em instituições moçambicanas. Saúde: a confirmar.",
+ requisitos:["Média mínima de 13 valores","Candidatura no Portal do Candidato do IBE e entrega do processo"],idioma:"Português",idade:"Até 25 anos",so_mulheres:"Não",
+ link:"https://maputo.embaixadaportugal.mne.gov.pt/images/Bolsas_2026/Edital_Bolsas_Internas_2026_VF.pdf",fonte:"https://maputo.embaixadaportugal.mne.gov.pt/images/Bolsas_2026/Edital_Bolsas_Internas_2026_VF.pdf",verificado:"2026-11-02",
+ notas:"O link é o edital de 2026. O de 2027 só aparece quando for publicado."},
+{id:"pec-g",nome:"PEC-G (Estudantes-Convénio de Graduação)",pais:"Brasil",bandeira:"🇧🇷",instituicao:"Ministérios da Educação e das Relações Exteriores do Brasil",
+ cobertura:"Parcial",cobertura_detalhes:"Vaga gratuita em licenciatura, sem propinas nem vestibular. Segundo um guia, sem subsídio de manutenção.",
+ quando:{ordem:"2027-03-31",tipo:"previsto",texto:"Previsto a partir de março de 2027. O edital anterior foi publicado a 25 mar 2026; o prazo de inscrição desse edital não foi confirmado. Estimativa."},
+ ciclo:"Estudos em 2027 (curso de português) ou 2028",cursos:"Depende das vagas de cada universidade. Medicina: a confirmar.",
+ requisitos:["Candidatura através da Embaixada do Brasil em Maputo (segundo um guia)"],idioma:"Português (Celpe-Bras pode ser exigido)",idade:"A confirmar",so_mulheres:"Não indicado",
+ link:"https://www.gov.br/mec/pt-br/pec/EDITALN22.pdf",fonte:"https://www.gov.br/mec/pt-br/pec/EDITALN22.pdf",verificado:"2026-11-02",
+ notas:"O link é o último edital oficial. Muda quando sair o novo."},
+{id:"camoes-portugal",nome:"Bolsas do Camões para licenciatura em Portugal",pais:"Portugal",bandeira:"🇵🇹",instituicao:"Camões I.P., Embaixada de Portugal e IBE",
+ cobertura:"A confirmar",cobertura_detalhes:"A confirmar no edital.",
+ quando:{ordem:"2027-06-26",tipo:"previsto",texto:"Previsto para junho de 2027. Em 2025 as candidaturas foram de 5 a 26 de junho. Estimativa, não confirmada."},
+ prazo_anterior:"5 a 26 jun 2025 (14 bolsas, ano letivo 2025/26)",ciclo:"2027/28",cursos:"A confirmar",
+ requisitos:["Sem bolsa do Estado português nos últimos 24 meses","Processo em formato original entregue no IBE, em Maputo"],idioma:"Português",idade:"Até 25 anos",so_mulheres:"Não",
+ link:"https://maputo.embaixadaportugal.mne.gov.pt/images/Bolsas_2025/Edital_Bolsas_de_Estudo_para_Portugal_2025_2026_Licenciaturas_VF.pdf",fonte:"https://maputo.embaixadaportugal.mne.gov.pt/images/Bolsas_2025/Edital_Bolsas_de_Estudo_para_Portugal_2025_2026_Licenciaturas_VF.pdf",verificado:"2026-11-02",
+ notas:"O link é o edital de 2025, o último que li. Não encontrei o de 2026."},
+{id:"ibe-argelia",nome:"Bolsas da Argélia (via IBE)",pais:"Argélia",bandeira:"🇩🇿",instituicao:"Governo da Argélia e IBE (Moçambique)",
+ cobertura:"Completa",cobertura_detalhes:"Um blogue sobre o edital indica propinas, alojamento e comida pagos. Confirmar no edital do IBE.",
+ quando:{ordem:"2027-09-20",tipo:"previsto",texto:"Previsto para setembro de 2027. O edital 29/2026 fechou a 20 set 2026. Estimativa com base num só ciclo."},
+ prazo_anterior:"20 set 2026 (edital 29/2026, 200 bolsas, ano letivo 2026/27)",ciclo:"2027/28",cursos:"Inclui Medicina, segundo o blogue sobre o edital de 2026.",
+ requisitos:["Candidatura online no Portal do Candidato do IBE, num único PDF","Quotas por província"],idioma:"A confirmar",idade:"A confirmar",so_mulheres:"Não indicado",
+ link:"https://ibe.gov.mz/",fonte:"https://ibe.gov.mz/index.php/2026/",verificado:"2026-11-02",
+ notas:"Dados do edital lidos num blogue, porque o site do IBE bloqueou a minha leitura. Confirma no IBE."},
+{id:"ibe-internas",nome:"Bolsas internas do IBE para licenciatura em Moçambique",pais:"Moçambique",bandeira:"🇲🇿",instituicao:"Instituto de Bolsas de Estudo (IBE, IP)",
+ cobertura:"Completa ou parcial",cobertura_detalhes:"No edital de 2025: completa (propinas e subsistência) em universidades públicas; parcial (propinas) em privadas.",
+ quando:{ordem:"2027-10-23",tipo:"previsto",texto:"Previsto para setembro e outubro de 2027. Em 2025 foi de 23 set a 23 out. O concurso de 2026 foi publicado a 29 set 2026; o prazo dele não consegui ver."},
+ prazo_anterior:"23 set a 23 out 2025 (165 bolsas)",ciclo:"2027/28",cursos:"Cursos de universidades moçambicanas, públicas e privadas",
+ requisitos:["Estar matriculada numa instituição de ensino superior em Moçambique","Média mínima de 12 valores (edital de 2025)","Candidatura online no portal do candidato, num PDF"],idioma:"Português",idade:"Até 25 anos (edital de 2025)",so_mulheres:"Não",
+ link:"https://ibe.gov.mz/",fonte:"https://ibe.gov.mz/index.php/2026/",verificado:"2026-11-02",
+ notas:"Requisitos copiados do edital de 2025. Vê se o concurso de 2026 ainda está aberto no site do IBE."},
+{id:"ur-mastercard",nome:"Mastercard Foundation Scholars na Universidade do Ruanda",pais:"Ruanda",bandeira:"🇷🇼",instituicao:"University of Rwanda e Mastercard Foundation",
+ cobertura:"Completa",cobertura_detalhes:"Guias descrevem: propinas, alojamento no campus, computador portátil e bolsa mensal.",
+ quando:{ordem:"2027-10-12",tipo:"previsto",texto:"Previsto para setembro e outubro de 2027. O ciclo de 2026/27 fechou a 12 out 2026 (portal oficial indica 'Closed'). Estimativa."},
+ prazo_anterior:"12 out 2026, 23h59 (hora de Kigali), 170 bolsas",ciclo:"2027/28",cursos:"A faculdade de Medicina e Ciências da Saúde tinha 87 bolsas (Medicina, Farmácia, Enfermagem e outros).",
+ requisitos:["Cidadã de um país africano","Cumprir os requisitos de admissão da universidade","Necessidade socioeconómica e liderança"],idioma:"Inglês",idade:"Até 28 anos",so_mulheres:"Não",
+ link:"https://mcfsprecruitment.ur.ac.rw/",fonte:"https://mcfsprecruitment.ur.ac.rw/",verificado:"2026-11-02",
+ notas:"Muito parecida com o que procuras: completa, inclui Medicina e aceita africanos de outros países."}
+]};
+</script><script>const $=s=>document.querySelector(s);
+const MESES=["janeiro","fevereiro","março","abril","maio","junho","julho","agosto","setembro","outubro","novembro","dezembro"];
+const cap=t=>t[0].toUpperCase()+t.slice(1);
+const norm=t=>String(t||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLowerCase();
+const HOJE=new Date();HOJE.setHours(0,0,0,0);
+function ler(k){try{return JSON.parse(localStorage.getItem(k))||{}}catch(e){return{}}}
+function gravar(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}
+let BOLSAS=DADOS.bolsas,ATUAL=DADOS.atualizado;
+let fav=ler("fav"),feita=ler("feita"),novas=ler("novas"),vistas=ler("vistas");
+if(Object.keys(vistas).length)BOLSAS.forEach(b=>{if(!vistas[b.id])novas[b.id]=true});
+BOLSAS.forEach(b=>vistas[b.id]=true);gravar("vistas",vistas);gravar("novas",novas);
+const dataDe=b=>b.prazo?new Date(b.prazo+"T00:00:00"):null;
+const dias=b=>Math.round((dataDe(b)-HOJE)/864e5);
+const extenso=d=>d.getDate()+" de "+MESES[d.getMonth()]+" de "+d.getFullYear();
+const ym=d=>d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0");
+const rotuloMes=k=>{const[a,m]=k.split("-");return cap(MESES[+m-1])+" "+a};
+const ordemDe=b=>b.prazo||(b.quando&&b.quando.ordem)||"9999";
+function chave(b){
+ if(b.prazo)return dataDe(b)<HOJE?"fechada":b.prazo.slice(0,7);
+ if(b.quando)return b.quando.ordem.slice(0,7);
+ return"confirmar";
+}
+function haystack(b){const k=chave(b),m=/^\d/.test(k)?(()=>{const n=+k.split("-")[1];return MESES[n-1]+" "+MESES[n-1].slice(0,3)+" "+n+" "+k.slice(0,4)})():"";
+ return norm([b.nome,b.pais,b.instituicao,b.cobertura,b.cobertura_detalhes,b.cursos,b.ciclo,b.idioma,b.requisitos.join(" "),b.notas,b.quando?b.quando.texto:"",m].join(" "))}
+function el(t,c,x){const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function marca(p,txt,termos){
+ const n=norm(txt);let i=0;const idx=[];
+ termos.forEach(t=>{let k=n.indexOf(t);while(t&&k>-1){idx.push([k,k+t.length]);k=n.indexOf(t,k+t.length)}});
+ idx.sort((a,b)=>a[0]-b[0]);
+ idx.forEach(([a,b])=>{if(a<i)return;p.append(txt.slice(i,a),el("mark",0,txt.slice(a,b)));i=b});
+ p.append(txt.slice(i));
+}
+function cartao(b,termos){
+ const d=dataDe(b),q=b.quando,tipo=d?"exato":q?q.tipo:"nenhum";
+ const a=el("article",tipo==="exato"?"conf":tipo==="janela"?"jan":tipo==="previsto"?"prev":"");a.id=b.id;
+ const dia=el("div","dia");
+ if(d)dia.append(el("b",0,String(d.getDate())),el("i",0,MESES[d.getMonth()].slice(0,3)));
+ else if(q)dia.append(el("b",0,MESES[+q.ordem.slice(5,7)-1].slice(0,3)),el("i",0,q.tipo));
+ else dia.append(el("b",0,"?"),el("i",0,"sem data"));
+ a.append(dia);
+ const h=el("h3");marca(h,b.nome,termos);if(novas[b.id])h.append(" ",el("span","nova","Nova"));a.append(h);
+ const l=el("p","linha");l.append(b.bandeira+" "+b.pais+", bolsa ",el("b",0,b.cobertura.toLowerCase()),", "+b.ciclo.toLowerCase().replace(/^(\d)/,"ano letivo $1"));a.append(l);
+ let txt="Prazo a confirmar no site oficial",c="p-cz";
+ if(d){const n=dias(b);txt=n<0?"Fechou a "+extenso(d):"Fecha a "+extenso(d)+", "+(n===0?"hoje":n===1?"falta 1 dia":"faltam "+n+" dias");c=n<0?"p-cz":n<=7?"p-vm":n<=21?"p-lar":"p-ver"}
+ else if(q){txt=(q.tipo==="previsto"?"Previsto, não confirmado. ":"Janela publicada. ")+q.texto;c=q.tipo==="previsto"?"p-cz":"p-lar"}
+ a.append(el("p","prazo "+c,txt));
+ if(b.prazo_anterior)a.append(el("p","vazio","Ciclo anterior: "+b.prazo_anterior+"."));
+ const det=el("dl","det");det.hidden=true;
+ [["Cobertura",b.cobertura_detalhes],["Cursos",b.cursos],["Requisitos",b.requisitos.join("; ")],["Idioma",b.idioma],["Limite de idade",b.idade],["Só mulheres",b.so_mulheres],["Entidade",b.instituicao],["Notas",b.notas],["Verificado em",b.verificado]]
+ .forEach(([k,v])=>{if(v)det.append(el("dt",0,k),el("dd",0,v))});
+ const f=el("dd"),fa=el("a",0,"Página consultada");fa.href=b.fonte;fa.target="_blank";fa.rel="noopener noreferrer";f.append(fa);det.append(el("dt",0,"Fonte"),f);
+ const ac=el("div","acoes");
+ const o=el("a","prim","Abrir site oficial");o.href=b.link;o.target="_blank";o.rel="noopener noreferrer";
+ const v=el("button",0,"Ver detalhes");v.type="button";v.setAttribute("aria-expanded","false");
+ v.onclick=()=>{det.hidden=!det.hidden;v.setAttribute("aria-expanded",String(!det.hidden));v.textContent=det.hidden?"Ver detalhes":"Menos detalhes";if(novas[b.id]){delete novas[b.id];gravar("novas",novas);const n=h.querySelector(".nova");if(n)n.remove()}};
+ const s=el("button",0,"Favorita");s.type="button";s.setAttribute("aria-pressed",!!fav[b.id]);
+ s.onclick=()=>{fav[b.id]=!fav[b.id];gravar("fav",fav);s.setAttribute("aria-pressed",!!fav[b.id])};
+ const k=el("button",0,"Já candidatei");k.type="button";k.setAttribute("aria-pressed",!!feita[b.id]);
+ k.onclick=()=>{feita[b.id]=!feita[b.id];gravar("feita",feita);k.setAttribute("aria-pressed",!!feita[b.id]);resumo()};
+ ac.append(o,v,s,k);a.append(ac,det);return a;
+}
+function meses(){const o=[];let a=HOJE.getFullYear(),m=HOJE.getMonth();while(a<2027||(a===2027&&m<=11)){o.push(a+"-"+String(m+1).padStart(2,"0"));if(++m>11){m=0;a++}}return o}
+function resumo(){
+ const ex=BOLSAS.filter(b=>b.prazo&&dias(b)>=0).length,pv=BOLSAS.filter(b=>b.quando&&b.quando.tipo==="previsto").length,n=BOLSAS.filter(b=>feita[b.id]).length;
+ $("#meta").textContent=BOLSAS.length+" bolsas. "+ex+" com data confirmada. "+pv+" com data prevista. "+n+" já candidatadas.";
+}
+function destaque(){
+ const h=$("#hero");h.textContent="";h.className="hero";
+ const p=BOLSAS.filter(b=>b.prazo&&dias(b)>=0).sort((a,b)=>a.prazo.localeCompare(b.prazo))[0];
+ h.append(el("p","rot",p?"Próximo prazo confirmado":"Sem prazo confirmado"));
+ if(!p){h.append(el("p","hn","Vê as datas previstas por mês abaixo."));return}
+ const d=dataDe(p),n=dias(p),g=el("div","gr"),t=el("div");
+ t.append(el("span","mes",MESES[d.getMonth()]+" de "+d.getFullYear()),el("span","falta",n===0?"é hoje":n===1?"falta 1 dia":"faltam "+n+" dias"));
+ g.append(el("span","num",String(d.getDate())),t);
+ const a=el("a",0,"Ver esta bolsa");a.href="#"+p.id;
+ h.append(g,el("p","hn",p.nome+", "+p.pais),a);
+}
+function desenhar(){
+ const termos=norm($("#q").value).split(/\s+/).filter(Boolean),cob=norm($("#fCob").value),pais=$("#fPais").value,fv=$("#fFav").value;
+ const r=BOLSAS.filter(b=>termos.every(t=>haystack(b).includes(t))&&(!cob||norm(b.cobertura).includes(cob))&&(!pais||b.pais===pais)&&
+  (!fv||(fv==="fav"&&fav[b.id])||(fv==="feita"&&feita[b.id])||(fv==="porfazer"&&!feita[b.id])));
+ r.sort((a,b)=>ordemDe(a).localeCompare(ordemDe(b)));
+ const lista=$("#lista"),menu=$("#menu");lista.textContent="";menu.textContent="";
+ $("#cont").textContent=r.length+" de "+BOLSAS.length+" bolsas";
+ if(!r.length)lista.append(el("p","vazio","Nenhuma bolsa encontrada. Tenta outra palavra ou toca em Limpar."));
+ const ks=meses().map(k=>[k,rotuloMes(k)]).concat([["confirmar","Prazo a confirmar"],["fechada","Já fechadas"]]);
+ ks.forEach(([k,nome],i)=>{
+  const g=r.filter(b=>chave(b)===k);
+  if(!g.length&&i>=3)return;
+  const s=el("section");s.id="s"+i;const h=el("h2",0,nome);h.append(el("small",0,String(g.length)));s.append(h);
+  if(!g.length)s.append(el("p","vazio","Nenhuma bolsa com prazo conhecido neste mês."));
+  g.forEach(b=>s.append(cartao(b,termos)));lista.append(s);
+  const a=el("a",0,/^\d/.test(k)?cap(MESES[+k.slice(5)-1].slice(0,3))+" "+k.slice(2,4):nome);a.href="#s"+i;menu.append(a);
+ });
+}
+function preencherPaises(){const sel=$("#fPais"),v=sel.value;sel.length=1;[...new Set(BOLSAS.map(b=>b.pais))].sort().forEach(p=>{const o=el("option",0,p);o.value=p;sel.append(o)});sel.value=v}
+function carregarDados(){return new Promise((ok,erro)=>{const s=document.createElement("script");s.src="bolsas.js?t="+Date.now();s.onload=()=>{s.remove();ok()};s.onerror=()=>{s.remove();erro()};document.head.append(s)})}
+async function atualizar(){
+ const b=$("#atualizar"),e=$("#estado");b.disabled=true;e.textContent="A verificar a lista publicada...";
+ const antes=new Set(BOLSAS.map(x=>x.id));
+ try{
+  await carregarDados();BOLSAS=DADOS.bolsas;ATUAL=DADOS.atualizado;
+  const novos=BOLSAS.filter(x=>!antes.has(x.id));
+  novos.forEach(x=>{novas[x.id]=true;vistas[x.id]=true});gravar("novas",novas);gravar("vistas",vistas);
+  e.textContent=novos.length?(novos.length===1?"1 bolsa nova encontrada: ":novos.length+" bolsas novas encontradas: ")+novos.map(x=>x.nome).join("; ")+".":"Nenhuma bolsa nova. Lista de "+extenso(new Date(ATUAL+"T00:00:00"))+".";
+  preencherPaises();resumo();destaque();desenhar();
+  if("serviceWorker" in navigator)navigator.serviceWorker.getRegistration().then(r=>r&&r.update()).catch(()=>{});
+ }catch(x){e.textContent="Sem ligação ao ficheiro da lista. A mostrar a última lista guardada."}
+ b.disabled=false;
+}
+preencherPaises();
+["#q","#fCob","#fPais","#fFav"].forEach(s=>$(s).addEventListener("input",desenhar));
+$("#limpar").onclick=()=>{$("#q").value="";["#fCob","#fPais","#fFav"].forEach(s=>$(s).value="");desenhar()};
+$("#atualizar").onclick=atualizar;
+$("#estado").textContent="Lista de "+extenso(new Date(ATUAL+"T00:00:00"))+".";
+$("#rod").textContent="Cada bolsa mostra a página consultada e a data de verificação. Novos editais aparecem em ibe.gov.mz.";
+resumo();destaque();desenhar();
+// Tema claro e escuro
+const escuro=()=>matchMedia("(prefers-color-scheme: dark)").matches;
+const efetivo=()=>document.documentElement.dataset.theme||(escuro()?"dark":"light");
+function pintarTema(){const e=efetivo();$("#tema").textContent=e==="dark"?"Modo claro":"Modo escuro";const m=document.querySelector('meta[name=theme-color]');if(m)m.content=e==="dark"?"#12354f":"#bfe0f7"}
+$("#tema").onclick=()=>{const n=efetivo()==="dark"?"light":"dark";document.documentElement.dataset.theme=n;try{localStorage.setItem("tema",n)}catch(e){}pintarTema()};
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change",pintarTema);pintarTema();</script></body></html>
